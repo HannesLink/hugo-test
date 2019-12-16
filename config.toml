@@ -1,4 +1,6 @@
 baseURL = "https://hanneslink.github.io/hugo-test/"
+RelativeURLs=true
+CanonifyURLs=true
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "gohugo-theme-ananke"
