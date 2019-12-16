@@ -3,4 +3,4 @@ RelativeURLs=true
 CanonifyURLs=true
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "gohugo-theme-ananke"
+theme = "ananke"
