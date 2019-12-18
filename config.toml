@@ -57,6 +57,11 @@ paginate = 10
         <strong>Great Britain</strong>
       </p>
       """
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
 
 [params.recent_posts]
     enable = true
