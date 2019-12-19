@@ -1,0 +1,8 @@
+weight: 1
+title: "Test"
+description: >
+  <ul class="list-style-none">
+    <li>Erster Eintrag</li>
+    <li>Test Content</li>
+  </ul>
+image: "images/CSIRO_ScienceImage_2042_A_row_of_computer_servers_in_a_server_rack.jpg"

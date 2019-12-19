@@ -8,3 +8,5 @@ Testing GitHub CI/CD Actions for autodeploying a Hugo website to GitHub Pages ht
   CSIRO [CC BY 3.0 (https://creativecommons.org/licenses/by/3.0)]
 * https://commons.wikimedia.org/wiki/File:Briefumschlag_fcm.jpg
   Photograph:  Frank C. Müller, Baden-Baden [CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5)]
+* https://commons.wikimedia.org/wiki/File:Profile_avatar_generic.png
+  Google, Chromium project [BSD (http://opensource.org/licenses/bsd-license.php)]

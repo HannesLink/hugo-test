@@ -1,9 +1,17 @@
 baseURL = "https://hanneslink.github.io/hugo-test/"
-RelativeURLs=true
-CanonifyURLs=true
-languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "universal"
+RelativeURLs=true
+CanonifyURLs=true
+languageCode = "de-de"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "de"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+# Define the number of posts per page
 paginate = 10
 
 [menu]
@@ -12,7 +20,7 @@ paginate = 10
 
 [[menu.main]]
     identifier="home"
-    name = "Home"
+    name = "Startseite"
     url  = "/"
     weight = 1
 
@@ -24,30 +32,84 @@ paginate = 10
 
 [[menu.main]]
     identifier = "faq"
-    name = "FAQ"
+    name = "Häufige Fragen"
     url  = "/faq/"
     weight = 3
 
 [[menu.main]]
     identifier = "contact"
-    name = "Contact"
+    name = "Kontakt"
     url  = "/contact/"
     weight = 4
 
-[Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+# Top bar social links menu
+
+[[menu.topbar]]
+    weight = 1
+    name = "GitHub"
+    url = "https://github.com/devcows/hugo-universal-theme"
+    pre = "<i class='fab fa-2x fa-github'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Facebook"
+    url = "http://facebook.com"
+    pre = "<i class='fab fa-2x fa-facebook'></i>"
+
+[[menu.topbar]]
+    weight = 3
+    name = "Twitter"
+    url = "http://twitter.com"
+    pre = "<i class='fab fa-2x fa-twitter'></i>"
+
+[[menu.topbar]]
+    weight = 4
+    name = "Email"
+    url = "mailto:max.muster@testmail.com"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
     viewMorePostLink = "/blog/"
+    author = "Johannes Link"
+    defaultKeywords = ["jlink", "hugo", "go"]
     mainSections = ["blog"]
-    date_format = "January 2, 2006"
-#     latitude = "-12.043333"
-#     longitude = "-77.028333"
-#     direction = "Desamparados Station, Distrito de Lima 15001, Peru"
+    defaultDescription = "Site template made by devcows using hugo"
+
+    # Social media
+    facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
+    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
+    default_sharing_image = "img/sharing-default.png"
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    # googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "green"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    # email = "your@email.com"
+    # contact_form_ajax = false
+
+    about_us = "<p>Das ist unser Verein</p>"
+    copyright = "Copyright (c) 2019, Verein"
+
+    # Format dates with Go's time formatting
+    date_format = "02 January 2006"
+
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
     address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
         <br>Newtown upon River
@@ -57,11 +119,30 @@ paginate = 10
         <strong>Great Britain</strong>
       </p>
       """
+
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Erreicht uns unter max.muster@testmail.com</p>
+      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+      </p>
+      """
+
 # Enable and disable widgets for the right sidebar
 [params.widgets]
     categories = true
     tags = true
     search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
 
 [params.features]
     enable = true
@@ -69,8 +150,31 @@ paginate = 10
     # at 'exampleSite/data/features'.
     # For more informtion take a look at the README.
 
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Testimonials"
+    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+[params.see_more]
+    enable = true
+    icon = "far fa-file-alt"
+    title = "Do you want to see more?"
+    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
+    link_url = "#"
+    link_text = "Check other homepages"
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Our Clients"
+    subtitle = ""
+
 [params.recent_posts]
     enable = true
     title = "From our blog"
     subtitle = "This is just for testing. There will be some demo content in order to test the univeral theme. No need to worry"
-
